@@ -143,3 +143,5 @@ dmypy.json
 *.swp
 *.pth.tar
 *.npy
+*.jpg
+*.png
