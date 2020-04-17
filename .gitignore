@@ -145,3 +145,8 @@ dmypy.json
 *.npy
 *.jpg
 *.png
+
+
+#####
+infos/
+All_data_vcoco/
