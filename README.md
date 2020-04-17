@@ -20,7 +20,7 @@ git clone --recursive https://github.com/ASMIftekhar/VSGNet.git
 ```Shell
 bash download_data.sh
 ```
-You need to have wget and unzip packages to execute this script. Alternatively you can download these files from [here].(https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing)
+You need to have wget and unzip packages to execute this script. Alternatively you can download these files from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
 If you execute the script then there will be two folders in the directory "All\_data\_vcoco" and "infos". This will take close to 1.9GB space. Inside the All\_data\_vcoco folder you will find the following subdirectories.
 
 a.**Data_vcoco**: It will contain all training and validation images of v-coco inside train2014 subdirectory and all test images of v-coco inside val2014 subdirectory.
