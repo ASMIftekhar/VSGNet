@@ -1,0 +1,4 @@
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1XwLrv2_jEWvUBCAiANSMUyy_NLN2UeiW' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1XwLrv2_jEWvUBCAiANSMUyy_NLN2UeiW" -O pre.zip && rm -rf /tmp/cookies.txt
+unzip pre.zip && rm pre.zip
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1_XGHqxhm3Iqlc2pu6OnkYj2e4QAHLh-W' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1_XGHqxhm3Iqlc2pu6OnkYj2e4QAHLh-W" -O pre.zip && rm -rf /tmp/cookies.txt
+unzip pre.zip && rm pre.zip
