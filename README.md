@@ -11,7 +11,7 @@ If you find this work useful, please consider our paper:
   year={2020}
 }
 
-##Installation
+## Installation
 1. Clone repository (recursively)
 ```Shell
 	git clone --recursive https://github.com/ASMIftekhar/VSGNet.git
