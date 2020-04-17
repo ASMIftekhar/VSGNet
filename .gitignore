@@ -127,3 +127,19 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+###
+*.com 
+*.class
+*.dll
+*.exe
+*.o
+*.so 
+*.pkl
+*.pyc
+*.pickle
+*.json
+*.swp
+*.pth.tar
+*.npy
