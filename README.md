@@ -23,7 +23,7 @@ bash download_data.sh
 You need to have wget and unzip packages to execute this script. Alternatively you can download these files from [here].(https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing)
 If you execute the script then there will be two folders in the directory "All\_data\_vcoco" and "infos". This will take close to 1.9GB space. Inside the All\_data\_vcoco folder you will find the following subdirectories.
 
-**a.Data\_vcoco **: It will contain all training and validation images of v-coco inside train2014 subdirectory and all test images of v-coco inside val2014 subdirectory.
+**a.Data_vcoco **: It will contain all training and validation images of v-coco inside train2014 subdirectory and all test images of v-coco inside val2014 subdirectory.
 
 **b.Annotations\_vcoco**: It will contain all annotations of training, validation and testing set in three json files. The annotation is taken from v-coco API and converted into our convenient format. For example, lets consider there is only one single image annotated with two verbs "smile" and "hold" along with two persons and object bounding boxes. The annotation file will be arranged as follows:
 
