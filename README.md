@@ -11,6 +11,31 @@ If you find this work useful, please consider our paper:
   		year={2020}
 	}
 
+
+## Results on HICO-DET and V-COCO
+
+
+
+**Our Results on V-COCO dataset**
+
+|Method| Scenario 1 |
+|:---:|:---:|
+|[InteractNet](https://arxiv.org/pdf/1704.07333.pdf)| 40.0|
+|[Kolesnikov et al.](http://openaccess.thecvf.com/content_ICCVW_2019/html/SGRL/Kolesnikov_Detecting_Visual_Relationships_Using_Box_Attention_ICCVW_2019_paper.html)| 41.0|
+|[GPNN](https://arxiv.org/abs/1808.07962)| 44.0 |
+|[iCAN](https://arxiv.org/abs/1808.10437)| 45.3  |
+|[Li et al.](https://arxiv.org/abs/1811.08264)| 47.8 |
+|**VSGNet**| **51.8** |
+**Our Results on HICO-DET dataset**
+
+|Method| Full | Rare | None-Rare|
+|:---:|:---:|:---:|:---:|
+|[HO-RCNN](http://www-personal.umich.edu/~ywchao/publications/chao_wacv2018.pdf)| 7.81 | 5.37 | 8.54 | 
+|[InteractNet](https://arxiv.org/pdf/1704.07333.pdf)|9.94 | 7.16| 10.77| 
+|[GPNN](https://arxiv.org/abs/1808.07962)| 10.61  | 7.78 | 11.45 | 
+|[iCAN](https://arxiv.org/abs/1808.10437)| 14.84  | 10.45 | 16.15 | 
+|[Li et al.](https://arxiv.org/abs/1811.08264)| 17.03   | 13.42 | 18.11 | 
+|**VSGNet**| **19.8**  | **16.05** | **20.91** | 
 ## Installation
 1. Clone repository (recursively):
 ```Shell
@@ -96,4 +121,4 @@ Lets consider the best result is achieved at 30th epoch then to evaluate the res
 python2 calculate_map_vcoco.py -fw new_test -sa 30 -t test
 ```
 
-Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
+Code for HICO dataset will be released later. Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
