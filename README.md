@@ -90,7 +90,6 @@ CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20
 To understand the flags more please consult main.py. The given example is a typical hyperparameter settings. The model converges normally within 40 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. After running the model,  to store the results in v-coco format:
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -r t -i t
-python2 calculate_map_vcoco.py -fw new_test -sa (the) -t test
  ```
 Lets consider the best result is achieved at 30th epoch then to evaluate the result in original V-COCO scheme:
 ```
