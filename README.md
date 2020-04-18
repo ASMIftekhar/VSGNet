@@ -69,9 +69,32 @@ To see the results in original v-coco scheme:
 python2 calculate_map_vcoco.py -fw soa_paper -sa 34 -t test
 ```
 
+## Training in V-COCO
 
+To train the model from scratch:
+```
+CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20 
+```
+**Flags description**:
 
+**-fw:** Name of the folder in which the result will be stored.
 
-The code will be released within April 2020. 
+**-ba:** Batch size.
+
+**-l:** Learning rate.
+
+**-e:** Number of epochs.
+
+**-sa:** After how many epochs the model would be saved, remember by default for every epoch the best model will be saved. If someone wants to store the model at a particular epoch then this flag should be used.
+
+To understand the flags more please consult main.py. The given example is a typical hyperparameter settings. The model converges normally within 40 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. After running the model,  to store the results in v-coco format:
+```
+CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -r t -i t
+python2 calculate_map_vcoco.py -fw new_test -sa (the) -t test
+ ```
+Lets consider the best result is achieved at 30th epoch then to evaluate the result in original V-COCO scheme:
+```
+python2 calculate_map_vcoco.py -fw new_test -sa 30 -t test
+```
 
 Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
