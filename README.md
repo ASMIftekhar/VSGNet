@@ -60,6 +60,8 @@ To store the best result in v-coco format run(inside "scripts/"):
 ```Shell
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw soa_paper -ba 8 -r t -i t
 ```
+You can use as many gpus as you wish. Just add the necessary gpu ids in the given command.
+
 The outputs that will be shown in the console is basically Average Precision in test set without considering bounding boxes. 
 
 To see the results in original v-coco scheme:
