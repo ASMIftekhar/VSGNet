@@ -43,7 +43,6 @@ If you execute the script then there will be two folders in the directory "All\_
 ```
 pip2 install -r requirements.txt
 ```
-There are few additional packages which will not be required. 
 
 4. If you do not wish to move "All\_data\_vcoco" folder from the main directory then you dont need to do anything else to setup the repo. Otherwise you need to run setup.py with the location of All\_data\_vcoco. If you put it in /media/ssd2 with a new name of "data" then you need to execute the following command:
 ```
