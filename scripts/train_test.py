@@ -172,7 +172,7 @@ def train_test(model, optimizer,scheduler,dataloader,number_of_epochs,break_poin
         scheduler.step()
         print('Epoch {}/{}'.format(epoch+1,end_of_epochs))
         print('-' * 10)
-        print('Lr: {}'.format(scheduler.get_lr()))
+        #print('Lr: {}'.format(scheduler.get_lr()))
 	initial_time_epoch=time.time()
 	
 
