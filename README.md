@@ -23,9 +23,9 @@ bash download_data.sh
 You need to have wget and unzip packages to execute this script. Alternatively you can download the data from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
 If you execute the script then there will be two folders in the directory "All\_data\_vcoco" and "infos". This will take close to 1.9GB space. Inside the All\_data\_vcoco folder you will find the following subdirectories.
 
-a.**Data_vcoco**: It will contain all training and validation images of v-coco inside train2014 subdirectory and all test images of v-coco inside val2014 subdirectory.
+**a.Data_vcoco**: It will contain all training and validation images of v-coco inside train2014 subdirectory and all test images of v-coco inside val2014 subdirectory.
 
-b.**Annotations\_vcoco**: It will contain all annotations of training, validation and testing set in three json files. The annotations are taken from v-coco API and converted into our convenient format. For example, lets consider there is only one single image annotated with two verbs "smile" and "hold" along with two person and object bounding boxes. The annotation for this image will be arranged as follows:
+**b.Annotations\_vcoco**: It will contain all annotations of training, validation and testing set in three json files. The annotations are taken from v-coco API and converted into our convenient format. For example, lets consider there is only one single image annotated with two verbs "smile" and "hold" along with two person and object bounding boxes. The annotation for this image will be arranged as follows:
 
 ```
 	{image_id:[{'Verbs': 'hold',
@@ -35,9 +35,9 @@ b.**Annotations\_vcoco**: It will contain all annotations of training, validatio
   	'object': {'obj_bbx': []},
   	person_bbx': [0.0, 0.63, 441.03, 368.86]}]}
 ```
-c.**Object\_Detections\_vcoco**: It will contain all object detection results for v-coco. 
+**c.Object\_Detections\_vcoco**: It will contain all object detection results for v-coco. 
 
-d.**v-coco**: It will contain original v-coco API. This is needed for doing evaluations.
+**d.v-coco**: It will contain original v-coco API. This is needed for doing evaluations.
 
 3. To install all packages:
 ```
@@ -45,6 +45,10 @@ pip2 install -r requirements.txt
 ```
 There are few additional packages which will not be required. 
 
+4. If you do not wish to move "All\_data\_vcoco" folder from the main directory then you dont need to do anything else to setup the repo. Otherwise you need to run setup.py with the location of All\_data\_vcoco. If you put it in /media/ssd2 with a new name of "data" then you need to execute the following command:
+```
+python2 setup.py -d /media/ssd2/data
+```
 
 
 
