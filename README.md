@@ -39,6 +39,11 @@ c.**Object\_Detections\_vcoco**: It will contain all object detection results fo
 
 d.**v-coco**: It will contain original v-coco API. This is needed for doing evaluations.
 
+3. To install all packages:
+```
+pip2 install -r requirements.txt
+```
+There are few additional packages which will not be required. 
 
 
 
