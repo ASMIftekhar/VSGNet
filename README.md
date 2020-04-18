@@ -49,6 +49,23 @@ pip2 install -r requirements.txt
 python2 setup.py -d /media/ssd2/data
 ```
 
+## Evaluation in V-COCO
+To download the pre-trained model for the results reported in the paper:
+```Shell
+bash download_res.sh
+```
+This will store the model in 'soa_paper' folder. Alternatively you can download the model from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
+
+To store the best result in v-coco format run(inside "scripts/"):
+```Shell
+CUDA_VISIBLE_DEVICES=0 python2 main.py -fw soa_paper -ba 8 -r t -i t
+```
+The outputs that will be shown in the console is basically Average Precision in test set without considering bounding boxes. 
+
+To see the results in original v-coco scheme:
+```Shell
+python2 calculate_map_vcoco.py -fw soa_paper -sa 34 -t test
+```
 
 
 
