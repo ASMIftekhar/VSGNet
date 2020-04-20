@@ -26,6 +26,7 @@ If you find this work useful, please consider our paper:
 |[iCAN](https://arxiv.org/abs/1808.10437)| 45.3  |
 |[Li et al.](https://arxiv.org/abs/1811.08264)| 47.8 |
 |**VSGNet**| **51.8** |
+
 **Our Results on HICO-DET dataset**
 
 |Method| Full | Rare | None-Rare|
