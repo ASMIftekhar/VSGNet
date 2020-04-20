@@ -2,7 +2,7 @@
 Code for our CVPR 2020 paper [**VSGNet:Spatial Attention Network for Detecting Human Object Interactions Using Graph Convolutions.**](https://arxiv.org/abs/2003.05541) 
 
 ## Citing
-If you find this work useful, please consider our paper:
+If you find this work useful, please consider our paper to cite:
 
 	@article{ulutan2020vsgnet,
   		title={VSGNet: Spatial Attention Network for Detecting Human Object Interactions Using Graph Convolutions},
