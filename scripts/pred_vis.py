@@ -73,22 +73,22 @@ def visual(image_id,flag,pairs_info,score_HOI,score_interact,score_obj_box,score
     
                 cur_obj_path_s = OBJ_PATH_train_s + "COCO_train2014_%.12i.json" % (this_image)
         	
-                image_dir_s=image_dir_train+'/train2014COCO_train2014_%.12i.jpg'%(this_image)
+                image_dir_s=image_dir_train+'/COCO_train2014_%.12i.jpg'%(this_image)
 
             elif flag=='test':
     
                 cur_obj_path_s = OBJ_PATH_test_s + "COCO_val2014_%.12i.json" % (this_image)
-                image_dir_s=image_dir_test +'/val2014/COCO_val2014_%.12i.jpg'%(this_image)
+                image_dir_s=image_dir_test +'/COCO_val2014_%.12i.jpg'%(this_image)
             elif flag=='val':
                 cur_obj_path_s = OBJ_PATH_train_s + "COCO_train2014_%.12i.json" % (this_image)
-        	image_dir_s=image_dir_val+ '/train2014/COCO_train2014_%.12i.jpg'%(this_image)
+        	image_dir_s=image_dir_val+ '/COCO_train2014_%.12i.jpg'%(this_image)
 	    with open(cur_obj_path_s) as fp: 
 	        detections = json.load(fp)
 	    img_H = detections['H']
             img_W = detections['W']
 	    person_bbx= np.array([img_W,img_H,img_W,img_H],dtype=float)*person_bbxn
             obj_bbx= np.array([img_W,img_H,img_W,img_H],dtype=float)*obj_bbxn
-	    img = cv2.imread(image_dir_s,3)
+            img = cv2.imread(image_dir_s,3)
 	    start_index=0
 	    for person_box in person_bbx:
 	        for object_box in obj_bbx:
