@@ -9,4 +9,4 @@ args=parser.parse_args()
 
 dirr=args.Directory
 
-with open('../infos/directory.json','w') as fp:json.dump(dirr,fp)
+with open('infos/directory.json','w') as fp:json.dump(dirr,fp)
