@@ -324,7 +324,7 @@ class VSGNet(nn.Module):
         
         
         
-        #### Prediction from visual features####
+        #### Prediction from graph features####
         
         lin_graph_h=self.lin_graph_head(pairs_graph)
 	lin_graph_t=lin_graph_h*out2_union
