@@ -25,7 +25,7 @@ If you find this work useful, please consider our paper to cite:
 |[GPNN](https://arxiv.org/abs/1808.07962)| 44.0 |
 |[iCAN](https://arxiv.org/abs/1808.10437)| 45.3  |
 |[Li et al.](https://arxiv.org/abs/1811.08264)| 47.8 |
-|**VSGNet**| **51.8** |
+|[**VSGNet**](https://arxiv.org/abs/2003.05541)| **51.8** |
 
 **Our Results on HICO-DET dataset**
 
@@ -36,7 +36,7 @@ If you find this work useful, please consider our paper to cite:
 |[GPNN](https://arxiv.org/abs/1808.07962)| 10.61  | 7.78 | 11.45 | 
 |[iCAN](https://arxiv.org/abs/1808.10437)| 14.84  | 10.45 | 16.15 | 
 |[Li et al.](https://arxiv.org/abs/1811.08264)| 17.03   | 13.42 | 18.11 | 
-|**VSGNet**| **19.8**  | **16.05** | **20.91** | 
+|[**VSGNet**](https://arxiv.org/abs/2003.05541)| **19.8**  | **16.05** | **20.91** | 
 ## Installation
 1. Clone repository (recursively):
 ```Shell
