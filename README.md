@@ -125,4 +125,4 @@ Lets consider the best result is achieved at 30th epoch then to evaluate the res
 python2 calculate_map_vcoco.py -fw new_test -sa 30 -t test
 ```
 
-Code for HICO dataset will be released later. Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
+Code for HICO dataset will be released later(Within June 2020). Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
