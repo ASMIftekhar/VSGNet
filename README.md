@@ -21,7 +21,7 @@ If you find this work useful, please consider our paper to cite:
 
 **Our Results on V-COCO dataset**
 
-|Method| Scenario 1 |
+|Method| mAP (Scenario 1)|
 |:---:|:---:|
 |[InteractNet](https://arxiv.org/pdf/1704.07333.pdf)| 40.0|
 |[Kolesnikov et al.](http://openaccess.thecvf.com/content_ICCVW_2019/html/SGRL/Kolesnikov_Detecting_Visual_Relationships_Using_Box_Attention_ICCVW_2019_paper.html)| 41.0|
@@ -32,7 +32,7 @@ If you find this work useful, please consider our paper to cite:
 
 **Our Results on HICO-DET dataset**
 
-|Method| Full | Rare | None-Rare|
+|Method| mAP (Full) | mAP (Rare) | mAP (None-Rare)|
 |:---:|:---:|:---:|:---:|
 |[HO-RCNN](http://www-personal.umich.edu/~ywchao/publications/chao_wacv2018.pdf)| 7.81 | 5.37 | 8.54 | 
 |[InteractNet](https://arxiv.org/pdf/1704.07333.pdf)|9.94 | 7.16| 10.77| 
