@@ -7,12 +7,14 @@ Official repository of our [**CVPR 2020**](http://cvpr2020.thecvf.com/) paper.
 ## Citing
 If you find this work useful, please consider our paper to cite:
 
-	@article{ulutan2020vsgnet,
-  		title={VSGNet: Spatial Attention Network for Detecting Human Object Interactions Using Graph Convolutions},
-  		author={Ulutan, Oytun and Iftekhar, ASM and Manjunath, BS},
-  		journal={arXiv preprint arXiv:2003.05541},
-  		year={2020}
+	 @InProceedings{Ulutan_2020_CVPR,
+	author = {Ulutan, Oytun and Iftekhar, A S M and Manjunath, B. S.},
+	title = {VSGNet: Spatial Attention Network for Detecting Human Object Interactions Using Graph Convolutions},
+	booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+	month = {June},
+	year = {2020}
 	}
+
 
 
 ## Results on HICO-DET and V-COCO
