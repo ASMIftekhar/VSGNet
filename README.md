@@ -1,5 +1,5 @@
 # VSGNet 
-### [**VSGNet:Spatial Attention Network for Detecting Human Object Interactions Using Graph Convolutions**](https://arxiv.org/abs/2003.05541) 
+### [**VSGNet:Spatial Attention Network for Detecting Human Object Interactions Using Graph Convolutions**](http://openaccess.thecvf.com/content_CVPR_2020/papers/Ulutan_VSGNet_Spatial_Attention_Network_for_Detecting_Human_Object_Interactions_Using_CVPR_2020_paper.pdf) 
 
 [Oytun Ulutun*](https://sites.google.com/view/oytun-ulutan), [A S M Iftekhar*](https://sites.google.com/view/asmiftekhar/home), [B S Manjunath](https://vision.ece.ucsb.edu/people/bs-manjunath).
 
