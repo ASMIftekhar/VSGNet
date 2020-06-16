@@ -1,0 +1,7 @@
+joblib==0.14.1
+numpy==1.18.5
+pkg-resources==0.0.0
+PyYAML==5.3.1
+scikit-learn==0.22.2.post1
+scipy==1.4.1
+tqdm==4.46.1
