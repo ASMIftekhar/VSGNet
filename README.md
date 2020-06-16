@@ -88,6 +88,10 @@ Inside the All\_data folder you will find the following subdirectories.
 ```
 pip2 install -r requirements.txt
 ```
+For HICO_DET evaluation we will use python3 environment, to install those packages:
+```
+pip3 install -r requirements3.txt
+```
 
 4. If you do not wish to move "All\_data\_vcoco" folder from the main directory then you dont need to do anything else to setup the repo. Otherwise you need to run setup.py with the location of All\_data\_vcoco. If you put it in /media/ssd2 with a new name of "data" then you need to execute the following command:
 ```
