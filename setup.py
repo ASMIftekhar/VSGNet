@@ -4,7 +4,7 @@ import json
 
 
 parser=argparse.ArgumentParser()
-parser.add_argument('-d','--Directory',type=str,required=False,default='../All_data_vcoco/',help='Directory where all folders are kept')
+parser.add_argument('-d','--Directory',type=str,required=False,default='../All_data/',help='Directory where all folders are kept')
 args=parser.parse_args()
 
 dirr=args.Directory
