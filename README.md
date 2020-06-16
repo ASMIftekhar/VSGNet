@@ -123,7 +123,7 @@ python2 calculate_map_vcoco.py -fw soa_paper -sa 34 -t test
 ## Evaluation in HICO_DET
 
 
-To store the best result in v-coco format run(inside "scripts_hico/"):
+To store the best result in v-coco format run (inside "scripts_hico/"):
 ```Shell
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw soa_paper_hico -ba 8 -r t -i t
 ```
@@ -131,14 +131,14 @@ You can use as many gpus as you wish. Just add the necessary gpu ids in the give
 
 The outputs that will be shown in the console is basically Average Precision in test set without considering bounding boxes. 
 
-To see the results in original HICO_DET scheme run(inside "scripts_hico/HICO_eval/")
+To see the results in original HICO_DET scheme run (inside "scripts_hico/HICO_eval/")
 ```Shell
 bash compute_map.sh soa_paper_hico 20
 ```
 The evaluation code has been adapted from the [No-Frills repository.](https://github.com/BigRedT/no_frills_hoi_det)Here, 20 indicates the number of cpu cores to be used for evaluation, this can be changed to any number based on the system. 
 ## Training in V-COCO
 
-To train the model from scratch:
+To train the model from scratch (inside "scripts/"):
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20 
 ```
@@ -154,26 +154,26 @@ CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20
 
 **-sa:** After how many epochs the model would be saved, remember by default for every epoch the best model will be saved. If someone wants to store the model at a particular epoch then this flag should be used.
 
-To understand the flags more please consult main.py. The given example is a typical hyperparameter settings. The model converges normally within 40 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. After running the model,  to store the results in v-coco format:
+To understand the flags more please consult main.py. The given example is a typical hyperparameter settings. The model converges normally within 40 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. After running the model,  to store the results in v-coco format (inside "scripts/"):
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -r t -i t
  ```
-Lets consider the best result is achieved at 30th epoch then to evaluate the result in original V-COCO scheme:
+Lets consider the best result is achieved at 30th epoch then to evaluate the result in original V-COCO scheme(inside "scripts/"):
 ```
 python2 calculate_map_vcoco.py -fw new_test -sa 30 -t test
 ```
 ## Training in HICO_DET
 
-To train the model from scratch:
+To train the model from scratch (inside "scripts_hico/"):
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20 
 ```
 The flags are same as v-coco. The model converges normally within 30 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. We have used 4 2080Tis to train HICO_DET. It takes around 40 minutes per epoch.  
-After running the model, to store the results in HICO_DET format:
+After running the model, to store the results in HICO_DET format (inside "scripts_hico/"):
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -r t -i t
 ```
-To evaluate the result in original HICO_DET scheme:
+To evaluate the result in original HICO_DET scheme (inside "scripts_hico/HICO_eval/"):
 ```Shell
 bash compute_map.sh new_test 20
 ```
