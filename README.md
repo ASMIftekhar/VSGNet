@@ -123,7 +123,7 @@ python2 calculate_map_vcoco.py -fw soa_paper -sa 34 -t test
 ## Evaluation in HICO_DET
 
 
-To store the best result in v-coco format run (inside "scripts_hico/"):
+To store the best result in HICO_DET format run (inside "scripts_hico/"):
 ```Shell
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw soa_paper_hico -ba 8 -r t -i t
 ```
