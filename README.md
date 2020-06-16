@@ -99,11 +99,11 @@ python2 setup.py -d /media/ssd2/data/
 ```
 
 ## Downloading the Pre-Trained Models:
-To download the pre-trained model for the results reported in the paper:
+To download the pre-trained models for the results reported in the paper:
 ```Shell
 bash download_res.sh
 ```
-This will store the model for v-coco in 'soa_paper' folder and the model for HICO_DET in 'soa_paper_hico'. Alternatively you can download the model from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
+This will store the model for v-coco in 'soa_paper' folder and the model for HICO_DET in 'soa_paper_hico'. Alternatively you can download the models from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
 
 ## Evaluation in V-COCO
 
