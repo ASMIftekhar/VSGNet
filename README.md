@@ -168,8 +168,8 @@ To train the model from scratch:
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20 
 ```
-The flags are same as v-coco. The model converges normally within 30 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. We have used 4 2080Tis to train HICO_DET. It takes around 40 minutes per epochs.  
-After running the model,  to store the results in HICO_DET format:
+The flags are same as v-coco. The model converges normally within 30 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. We have used 4 2080Tis to train HICO_DET. It takes around 40 minutes per epoch.  
+After running the model, to store the results in HICO_DET format:
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -r t -i t
 ```
