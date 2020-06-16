@@ -178,4 +178,4 @@ To evaluate the result in original HICO_DET scheme:
 bash compute_map.sh new_test 20
 ```
 
-Code for HICO dataset will be released later(Within June 2020). Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
+Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
