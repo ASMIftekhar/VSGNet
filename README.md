@@ -54,7 +54,9 @@ git clone --recursive https://github.com/ASMIftekhar/VSGNet.git
 bash download_data.sh
 ```
 You need to have wget and unzip packages to execute this script. Alternatively you can download the data from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
-If you execute the script then there will be two folders in the directory "All\_data\_vcoco" and "infos". This will take close to 1.9GB space. Inside the All\_data\_vcoco folder you will find the following subdirectories.
+If you execute the script then there will be two folders in the directory "All\_data" and "infos". This will take close to 10GB space. This contains both of the datasets and all the essential files. 
+
+Inside the All\_data folder you will find the following subdirectories.
 
 **a.Data_vcoco**: It will contain all training and validation images of v-coco inside train2014 subdirectory and all test images of v-coco inside val2014 subdirectory.
 
@@ -71,6 +73,16 @@ If you execute the script then there will be two folders in the directory "All\_
 **c.Object\_Detections\_vcoco**: It will contain all object detection results for v-coco. 
 
 **d.v-coco**: It will contain original v-coco API. This is needed for doing evaluations.
+
+**e.Data_hico**: It will contain all the training images of HICO-DET inside train2015 subdirectory and all test images of HICO_DET inside test2015 subdirectory.
+
+**f.Annotations\_hico**: same as folder (b) but for HICO_DET dataset.
+
+**g.Object\_Detections\_hico**: same as folder (c) but for HICO_DET dataset.
+
+**h.bad\_Detections\_hico**: It will contain the list of images in HICO_DET dataset where our object detector fails to detect any person or object.
+
+**j.hico\_infos**: It will contain additional files required to run training and testing in HICO_DET.
 
 3. To install all packages:
 ```
