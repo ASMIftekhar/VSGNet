@@ -98,7 +98,7 @@ pip3 install -r requirements3.txt
 python2 setup.py -d /media/ssd2/data/
 ```
 
-## Doenloading Pre-Trained Models:
+## Downloading the Pre-Trained Models:
 To download the pre-trained model for the results reported in the paper:
 ```Shell
 bash download_res.sh
