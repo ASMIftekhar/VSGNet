@@ -84,11 +84,11 @@ Inside the All\_data folder you will find the following subdirectories.
 
 **j.hico\_infos**: It will contain additional files required to run training and testing in HICO_DET.
 
-3. To install all packages:
+3. To install all packages (preferable to run in a python2 virtual environment):
 ```
 pip2 install -r requirements.txt
 ```
-For HICO_DET evaluation we will use python3 environment, to install those packages:
+For HICO_DET evaluation we will use python3 environment, to install those packages (preferable to run in a python3 virtual environment):
 ```
 pip3 install -r requirements3.txt
 ```
