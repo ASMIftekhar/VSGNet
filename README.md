@@ -54,7 +54,7 @@ git clone --recursive https://github.com/ASMIftekhar/VSGNet.git
 bash download_data.sh
 ```
 You need to have wget and unzip packages to execute this script. Alternatively you can download the data from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
-If you execute the script then there will be two folders in the directory "All\_data" and "infos". This will take close to 10GB space. This contains both of the datasets and all the essential files. 
+If you execute the script then there will be two folders in the directory "All\_data" and "infos". This will take close to 10GB space. This contains both of the datasets and all the essential files. Also, if you just want to work with v-coco, download "All_data_vcoco" from the link.  
 
 Inside the All\_data folder you will find the following subdirectories.
 
