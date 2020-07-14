@@ -250,11 +250,11 @@ class VSGNet(nn.Module):
 		####Slicing##########	
 		people_this_batch=people_t[start_p:start_p+int(l[0])]
 		no_peo=len(people_this_batch)
-		objects_this_batch=objects_only[start_o:start_o+int(l[1])][1:]
+		objects_this_batch=objects_only[start_o:start_o+int(l[1])][0:]
 		no_objects_this_batch=objects_only[start_o:start_o+int(l[1])][0]
 		no_obj=len(objects_this_batch)	
 		interaction_prob_this_batch=interaction_prob[start_c:start_c+int(l[1])*int(l[0])]
-		if no_obj==0:
+                if no_obj==0:
 			
 			people_this_batch_r=people_this_batch
 			
@@ -270,11 +270,12 @@ class VSGNet(nn.Module):
 			adj_op=torch.zeros([no_obj,no_peo]).cuda()
 			
 			for index_probs,probs in enumerate(interaction_prob_this_batch):
-				if index_probs % (no_obj+1)!=0:
+				#if index_probs % (no_obj+1)!=0:
 					adj_l.append(probs) 
 					
 			adj_po=torch.cat(adj_l).view(len(adj_l),1)
 			adj_op=adj_po
+		        #import pdb;pdb.set_trace()
 		##############################
 
 
