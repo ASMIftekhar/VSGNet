@@ -250,7 +250,7 @@ class VSGNet(nn.Module):
 		####Slicing##########	
 		people_this_batch=people_t[start_p:start_p+int(l[0])]
 		no_peo=len(people_this_batch)
-		objects_this_batch=objects_only[start_o:start_o+int(l[1])][0:]
+		objects_this_batch=objects_only[start_o:start_o+int(l[1])]
 		no_objects_this_batch=objects_only[start_o:start_o+int(l[1])][0]
 		no_obj=len(objects_this_batch)	
 		interaction_prob_this_batch=interaction_prob[start_c:start_c+int(l[1])*int(l[0])]
@@ -284,7 +284,7 @@ class VSGNet(nn.Module):
 			people_this_batch_r=people_this_batch+torch.mm(adj_po.view([no_peo,no_obj]),self.peo_to_obj_w(objects_this_batch))
 			
 			objects_this_batch_r=objects_this_batch+torch.mm(adj_op.view([no_peo,no_obj]).t(),self.obj_to_peo_w(people_this_batch))
-			objects_this_batch_r=torch.cat((no_objects_this_batch.view([1,1024]),objects_this_batch_r))
+			#objects_this_batch_r=torch.cat((no_objects_this_batch.view([1,1024]),objects_this_batch_r))
 		#############################
 
 		#### Restructuring ####
