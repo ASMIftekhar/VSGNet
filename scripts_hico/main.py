@@ -87,7 +87,7 @@ hico_test=hico_Dataset(annotation_test,image_dir_test,transform=transforms.Compo
 dataloader_train = DataLoader(hico_train, batch_size,
                         shuffle=True,collate_fn=hico_collate,num_workers=24,worker_init_fn=_init_fn)#num_workers=batch_size
 dataloader_test = DataLoader(hico_test, batch_size,
-                        shuffle=False,collate_fn=hico_collate,num_workers=4, worker_init_fn=_init_fn)#num_workers=batch_size
+                        shuffle=False,collate_fn=hico_collate,num_workers=24, worker_init_fn=_init_fn)#num_workers=batch_size
 dataloader={'train':dataloader_train,'test':dataloader_test}
 
 
