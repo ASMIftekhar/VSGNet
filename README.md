@@ -54,7 +54,7 @@ git clone --recursive https://github.com/ASMIftekhar/VSGNet.git
 bash download_data.sh
 ```
 You need to have wget and unzip packages to execute this script. Alternatively you can download the data from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
-If you execute the script then there will be two folders in the directory "All\_data" and "infos". This will take close to 10GB space. This contains both of the datasets and all the essential files. 
+If you execute the script then there will be two folders in the directory "All\_data" and "infos". This will take close to 10GB space. This contains both of the datasets and all the essential files. Also, if you just want to work with v-coco, download "All_data_vcoco" from the link.  
 
 Inside the All\_data folder you will find the following subdirectories.
 
@@ -84,26 +84,30 @@ Inside the All\_data folder you will find the following subdirectories.
 
 **j.hico\_infos**: It will contain additional files required to run training and testing in HICO_DET.
 
-3. To install all packages:
+3. To install all packages (preferable to run in a python2 virtual environment):
 ```
 pip2 install -r requirements.txt
 ```
-For HICO_DET evaluation we will use python3 environment, to install those packages:
+For HICO_DET evaluation we will use python3 environment, to install those packages (preferable to run in a python3 virtual environment):
 ```
 pip3 install -r requirements3.txt
 ```
+Run only compute_map.sh in a python 3 enviornment. For all other use python 2 environment.
 
-4. If you do not wish to move "All\_data\_vcoco" folder from the main directory then you dont need to do anything else to setup the repo. Otherwise you need to run setup.py with the location of All\_data\_vcoco. If you put it in /media/ssd2 with a new name of "data" then you need to execute the following command:
+4. If you do not wish to move "All\_data" folder from the main directory then you dont need to do anything else to setup the repo. Otherwise you need to run setup.py with the location of All\_data. If you put it in /media/ssd2 with a new name of "data" then you need to execute the following command:
 ```
-python2 setup.py -d /media/ssd2/data
+python2 setup.py -d /media/ssd2/data/
 ```
 
-## Evaluation in V-COCO
-To download the pre-trained model for the results reported in the paper:
+## Downloading the Pre-Trained Models:
+To download the pre-trained models for the results reported in the paper:
 ```Shell
 bash download_res.sh
 ```
-This will store the model in 'soa_paper' folder. Alternatively you can download the model from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
+This will store the model for v-coco in 'soa_paper' folder and the model for HICO_DET in 'soa_paper_hico'. Alternatively you can download the models from [here](https://drive.google.com/drive/folders/1J8mN63bNIrTdBQzq7Lpjp4qxMXgYI-yF?usp=sharing).
+
+## Evaluation in V-COCO
+
 
 To store the best result in v-coco format run(inside "scripts/"):
 ```Shell
@@ -117,10 +121,25 @@ To see the results in original v-coco scheme:
 ```Shell
 python2 calculate_map_vcoco.py -fw soa_paper -sa 34 -t test
 ```
+## Evaluation in HICO_DET
 
+
+To store the best result in HICO_DET format run (inside "scripts_hico/"):
+```Shell
+CUDA_VISIBLE_DEVICES=0 python2 main.py -fw soa_paper_hico -ba 8 -r t -i t
+```
+You can use as many gpus as you wish. Just add the necessary gpu ids in the given command.
+
+The outputs that will be shown in the console is basically Average Precision in test set without considering bounding boxes. 
+
+To see the results in original HICO_DET scheme run (inside "scripts_hico/HICO_eval/")
+```Shell
+bash compute_map.sh soa_paper_hico 20
+```
+The evaluation code has been adapted from the [No-Frills repository.](https://github.com/BigRedT/no_frills_hoi_det)Here, 20 indicates the number of cpu cores to be used for evaluation, this can be changed to any number based on the system. 
 ## Training in V-COCO
 
-To train the model from scratch:
+To train the model from scratch (inside "scripts/"):
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20 
 ```
@@ -136,13 +155,28 @@ CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20
 
 **-sa:** After how many epochs the model would be saved, remember by default for every epoch the best model will be saved. If someone wants to store the model at a particular epoch then this flag should be used.
 
-To understand the flags more please consult main.py. The given example is a typical hyperparameter settings. The model converges normally within 40 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. After running the model,  to store the results in v-coco format:
+To understand the flags more please consult main.py. The given example is a typical hyperparameter settings. The model converges normally within 40 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. After running the model,  to store the results in v-coco format (inside "scripts/"):
 ```
 CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -r t -i t
  ```
-Lets consider the best result is achieved at 30th epoch then to evaluate the result in original V-COCO scheme:
+Lets consider the best result is achieved at 30th epoch then to evaluate the result in original V-COCO scheme(inside "scripts/"):
 ```
 python2 calculate_map_vcoco.py -fw new_test -sa 30 -t test
 ```
+## Training in HICO_DET
 
-Code for HICO dataset will be released later(Within June 2020). Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
+To train the model from scratch (inside "scripts_hico/"):
+```
+CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -l 0.001 -e 80 -sa 20 
+```
+The flags are same as v-coco. The model converges normally within 30 epochs. Again,you can use as many gpus as you wish. Just add the necessary gpu ids in the given command. We have used 4 2080Tis to train HICO_DET. It takes around 40 minutes per epoch.  
+After running the model, to store the results in HICO_DET format (inside "scripts_hico/"):
+```
+CUDA_VISIBLE_DEVICES=0 python2 main.py -fw new_test -ba 8 -r t -i t
+```
+To evaluate the result in original HICO_DET scheme (inside "scripts_hico/HICO_eval/"):
+```Shell
+bash compute_map.sh new_test 20
+```
+
+Please contact A S M Iftekhar (iftekhar@ucsb.edu) for any queries.
