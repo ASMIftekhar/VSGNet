@@ -17,7 +17,7 @@ pathlib2==2.3.5
 pdbpp==0.10.2
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==6.2.2
+Pillow==8.1.1
 pkg-resources==0.0.0
 prompt-toolkit==1.0.18
 ptyprocess==0.6.0
