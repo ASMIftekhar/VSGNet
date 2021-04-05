@@ -23,7 +23,7 @@ If you find this work useful, please consider our paper to cite:
 
 
 
-**Our Results on V-COCO dataset**
+## Our Results on V-COCO dataset
 
 |Method| mAP (Scenario 1)|
 |:---:|:---:|
@@ -34,8 +34,9 @@ If you find this work useful, please consider our paper to cite:
 |[Li et al.](https://arxiv.org/abs/1811.08264)| 47.8 |
 |[**VSGNet**](https://arxiv.org/abs/2003.05541)| **51.8** |
 
-**Our Results on HICO-DET dataset**
+## Our Results on HICO-DET dataset
 
+**Object Detector Pre-trained on COCO**
 |Method| mAP (Full) | mAP (Rare) | mAP (None-Rare)|
 |:---:|:---:|:---:|:---:|
 |[HO-RCNN](http://www-personal.umich.edu/~ywchao/publications/chao_wacv2018.pdf)| 7.81 | 5.37 | 8.54 | 
@@ -44,6 +45,23 @@ If you find this work useful, please consider our paper to cite:
 |[iCAN](https://arxiv.org/abs/1808.10437)| 14.84  | 10.45 | 16.15 | 
 |[Li et al.](https://arxiv.org/abs/1811.08264)| 17.03   | 13.42 | 18.11 | 
 |[**VSGNet**](https://arxiv.org/abs/2003.05541)| **19.8**  | **16.05** | **20.91** | 
+
+**Object Detector Fine-Tuned on HICO**
+
+We use the object detection results from [DRG](https://github.com/vt-vl-lab/DRG).
+|Method| mAP (Full) | mAP (Rare) | mAP (None-Rare)|
+|:---:|:---:|:---:|:---:|
+|[UniDet](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123600494.pdf)|17.58 |11.72 |19.33 |
+|[IP-Net](https://arxiv.org/pdf/2003.14023.pdf) | 19.56 |12.79| 21.58 |
+|[PPDM](https://arxiv.org/pdf/1912.12898v1.pdf) (paper) |21.10 |14.46| 23.09| 
+|[Functional](https://arxiv.org/pdf/1904.03181.pdf) |21.96 |16.43|23.62| 
+|[VCL](https://github.com/zhihou7/VCL)|23.63 |17.21 |25.55 |
+|[ConsNet](https://github.com/YLiuEric/ConsNet)|24.39 |17.10 |26.56|
+|[DRG](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123570681.pdf)|24.53 |19.47 |26.04 |
+|[IDN](https://github.com/DirtyHarryLYL/HAKE-Action-Torch/tree/IDN-(Integrating-Decomposing-Network))|26.29|**22.61**|27.39|
+|[**VSGNet**](https://arxiv.org/abs/2003.05541)| **26.54**| 21.26 | **28.12** |
+
+
 ## Installation
 1. Clone repository (recursively):
 ```Shell
