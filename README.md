@@ -53,7 +53,7 @@ We use the object detection results from [DRG](https://github.com/vt-vl-lab/DRG)
 |:---:|:---:|:---:|:---:|
 |[UniDet](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123600494.pdf)|17.58 |11.72 |19.33 |
 |[IP-Net](https://arxiv.org/pdf/2003.14023.pdf) | 19.56 |12.79| 21.58 |
-|[PPDM](https://arxiv.org/pdf/1912.12898v1.pdf) (paper) |21.10 |14.46| 23.09| 
+|[PPDM](https://arxiv.org/pdf/1912.12898v1.pdf) |21.10 |14.46| 23.09| 
 |[Functional](https://arxiv.org/pdf/1904.03181.pdf) |21.96 |16.43|23.62| 
 |[VCL](https://github.com/zhihou7/VCL)|23.63 |17.21 |25.55 |
 |[ConsNet](https://github.com/YLiuEric/ConsNet)|24.39 |17.10 |26.56|
